@@ -1,0 +1,80 @@
+CREATE TABLE `bank_application`.`customer` (
+  `uid` INT NOT NULL,
+  `firstname` VARCHAR(45) NOT NULL,
+  `lastname` VARCHAR(45) NOT NULL,
+  `middlename` VARCHAR(45) NOT NULL,
+  `dob` DATE NOT NULL,
+  `gender` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`uid`),
+  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC));
+
+
+INSERT INTO `bank_application`.`accounts`
+(`regno`,
+`firstname`,
+`middlename`,
+`lastname`,
+
+`dob`,
+`uid`)
+VALUES
+(1,
+'mayu',
+'deepak',
+'kulkarni',
+'1996-07-22',
+ 12
+);
+
+
+
+INSERT INTO `bank_application`.`customer`
+(`uid`,
+`firstname`,
+`lastname`,
+`middlename`,
+`dob`,
+`gender`,
+`email`)
+VALUES
+(1234,
+'mayuresh',
+'kulkarni',
+'deepak',
+'1996-07-22',
+'male',
+'mayu@g.co');
+
+
+
+post entry in customer table
+{
+  "email":"ramesh@g.co",
+"uid":1345,
+"customerFirstName":"ramesh",
+"customerMiddleName":"nilay",
+"customerLastName":"pawar",
+"gender":"male",
+"dateOfBirth": "1994-01-06"
+}
+
+
+
+INSERT INTO `bank_application`.`accounts`
+(
+`firstname`,
+`middlename`,
+`lastname`,
+`dob`,
+`uid`
+)
+VALUES
+(
+'mayuresh',
+'deepak',
+'kulkarni',
+
+'1991-07-28',
+123);
