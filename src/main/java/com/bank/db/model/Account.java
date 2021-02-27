@@ -13,7 +13,9 @@ import javax.persistence.TemporalType;
 @Table(name="accounts")
 public class Account {
 	@Id
-	 private Integer regno;
+	@Column(name="confirmationID")
+	
+	 private String regno;
 	
 	private int uid;
 	
@@ -30,10 +32,10 @@ public String toString() {
 			+ ", customerLastName=" + customerLastName + ", gender=" + gender + ", email=" + email + ", dateOfBirth="
 			+ dateOfBirth + "]";
 }
-	public Integer getRegno() {
+	public String getRegno() {
 	return regno;
 }
-public void setRegno(Integer regno) {
+public void setRegno(String regno) {
 	this.regno = regno;
 }
 public int getUid() {

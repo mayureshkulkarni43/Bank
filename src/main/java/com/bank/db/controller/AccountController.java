@@ -34,7 +34,7 @@ public Account getAccountByUID(@RequestParam int id){
 	}
 	
 	
-	@GetMapping("/accountsbyaccountno")
+	@GetMapping("/accountno")
 public Account getAccountByAccountNo(@RequestParam int id){
 		System.out.print(id);
 		return accService.findCustomerByAccountNo(id);
